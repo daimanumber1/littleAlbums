@@ -12,11 +12,29 @@
             border-bottom: 1px solid grey;
         }
 
+        
+
         .container div span {
             display: block;
             text-align: center;
             line-height: 100%;
             font-size: 18px;
+        }
+
+        #demo {
+            background: #f5f5f5;
+            display: block;
+            height: 40px;
+            margin: 20px 0px;
+            line-height: 40px;
+            padding-left: 20px;
+        }
+
+        #demo+span {
+            position: relative;
+            left: 85px;
+            top: -50px;
+            color: #777777;
         }
     </style>
 </head>
@@ -31,22 +49,28 @@
                 <a href="#">全部相册</a>
             </li>
             <li role="presentation">
-                <a href="/up">上传</a>
+                <a href="#">上传</a>
             </li>
         </ul>
     </div>
     <div class="container">
-        <% for(let i=0;i<albums.length;i++){ %>
-            <div class="col-md-3">
-                <a  href="<%= albums[i]%>" class="thumbnail">
-                    <img src="/images/wjj.jpg" width="100%">
-                </a>
-                <span>
-                    <%= albums[i] %>
-                </span>
-            </div>
-        <% } %>
+        <div id="demo">
+            <a href="/" >全部相册</a>
+        </div>
+        <span>/&nbsp;&nbsp;&nbsp;
+            <%= albumName%>
+        </span>
     </div>
+    <div class="container">
+        <% for(let i=0;i<images.length;i++) { %>
+            <div class="col-md-3">
+                <a href="#" class="thumbnail">
+                    <img src="<%= images[i] %>">
+                </a>
+            </div>
+            <% } %>
+    </div>
+
     <script src="/js/jquery-3.2.1.js"></script>
     <script src="/js/bootstrap.js"></script>
 </body>

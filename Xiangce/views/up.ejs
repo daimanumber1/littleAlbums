@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <style>
+        .container-fluid {
+            border-bottom: 1px solid grey;
+        }
+
+        .form-group {
+            overflow: hidden;
+            height: 100%;
+            margin: 15px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <ul class="nav nav-pills">
+            <li role="presentation">
+                <a href="#">小小相册</a>
+            </li>
+            <li role="presentation">
+                <a href="#">全部相册</a>
+            </li>
+            <li role="presentation">
+                <a href="#">上传</a>
+            </li>
+        </ul>
+    </div>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="exampleInputEmail1" class="col-md-12  col-md-offset-1">选择文件夹</label>
+            <div class="col-md-4 col-md-offset-1">
+                <select class="form-control" name="wenjianjia">
+                    <% for(let i=0; i<albums.length; i++) { %>
+                        <option>
+                            <%= albums[i] %>
+                        </option>
+                    <% }  %>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1" class="col-md-12 col-md-offset-1">选择图片</label>
+            <p class="col-md-12 col-md-offset-1">尺寸小于2M</p>
+            <div class="col-md-4 col-md-offset-1">
+                <input type="file" id="exampleInputFile" name='tupian'>
+            </div>
+        </div>
+        <div class="col-md-12 col-md-offset-1">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+
+    <script src="/js/jquery-3.2.1.js"></script>
+    <script src="/js/bootstrap.js"></script>
+</body>
+
+</html>

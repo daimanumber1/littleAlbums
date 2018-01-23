@@ -12,6 +12,12 @@
             border-bottom: 1px solid grey;
         }
 
+        .container div a {
+            display: block;
+            height: 100%;
+            /* border: 1px solid red; */
+        }
+
         .container div span {
             display: block;
             text-align: center;
@@ -31,24 +37,15 @@
                 <a href="#">全部相册</a>
             </li>
             <li role="presentation">
-                <a href="/up">上传</a>
+                <a href="#">上传</a>
             </li>
         </ul>
     </div>
     <div class="container">
-        <% for(let i=0;i<albums.length;i++){ %>
-            <div class="col-md-3">
-                <a  href="<%= albums[i]%>" class="thumbnail">
-                    <img src="/images/wjj.jpg" width="100%">
-                </a>
-                <span>
-                    <%= albums[i] %>
-                </span>
-            </div>
-        <% } %>
+        <img src="/images/404.jpg" alt="">
     </div>
-    <script src="/js/jquery-3.2.1.js"></script>
-    <script src="/js/bootstrap.js"></script>
+    <script src="/js/jquery-3.2.1"></script>
+    <script src="/js/bootstrap"></script>
 </body>
 
 </html>
